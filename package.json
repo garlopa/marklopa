@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "eslint-plugin-react": "^7.24.0",
     "gatsby": "^3.6.2",
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-react-helmet": "^4.7.1",
@@ -24,6 +25,8 @@
     "gatsby-transformer-sharp": "^3.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^6.0.2",
+    "remark-gfm": "^1.0.0"
   }
 }
