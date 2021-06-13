@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "eslint-plugin-react": "^7.24.0",
     "gatsby": "^3.6.2",
     "gatsby-plugin-image": "^1.7.1",
@@ -28,5 +29,11 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^6.0.2",
     "remark-gfm": "^1.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "gatsby-plugin-postcss": "^4.7.1",
+    "postcss": "^8.3.2",
+    "tailwindcss": "^2.1.4"
   }
 }
