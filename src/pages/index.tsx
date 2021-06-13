@@ -16,6 +16,39 @@ type DataProps = {
 const sampleText = `
 # Marklopa Example
 
+## Code Example
+\`\`\`
+npm install
+\`\`\`
+
+## Emphasis
+
+**This is bold text**
+
+*This is italic text*
+
+## Blockquotes
+
+> This is a blockquote
+
+## Lists
+
+Unordered
+
++ Create a list by starting a line with \`+\`, \`-\`, or \`*\`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
 ## GFM Support
 ### Strikethrough
 
@@ -40,7 +73,7 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
 
   const [value, setValue] = useState('')
 
-  useEffect (() => {
+  useEffect(() => {
     loadSampleData()
     return () => {}
   }, [])
@@ -55,8 +88,20 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
 
   return (
     <Layout title={siteTitle}>
-      <textarea value={value} onChange={onChange} />
-      <ReactMarkdown remarkPlugins={[gfm]} children={value} />
+      <div className="grid grid-cols-2 divide-x divide-gray-300 py-8">
+        <div className="w-auto h-full p-2">
+          <textarea
+            className="w-full h-full px-3 py-2 text-gray-700 border rounded-lg"
+            value={value}
+            onChange={onChange}
+          />
+        </div>
+        <div className="w-auto px-6">
+          <article className="w-full prose">
+            <ReactMarkdown remarkPlugins={[gfm]} children={value} />
+          </article>
+        </div>
+      </div>
     </Layout>
   )
 }
